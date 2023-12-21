@@ -1,0 +1,120 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.fileUploader::-webkit-file-upload-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  transition: all 0.5s;
+  padding: 0 1rem;
+  font: 500 0.9rem cursive;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(217, 224, 235);
+  border-radius: 5px;
+}
+
+.banner {
+  /* background-image: linear-gradient(to right, #635cd0, #2a7aad); */
+  background-image: url("https://wallpapers.com/images/featured/laptop-murjp1nk4lp1idlt.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vmin;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.banner::after {
+  content: "";
+  height: 100vmin;
+  width: 100vw;
+  position: absolute;
+  background-color: #effffe;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  clip-path: polygon(100% 54%, 0 100%, 100% 100%); 
+  clip-path: polygon(98% 100%, 0% 100%, 100% 100%);
+  clip-path: polygon(98% 100%, 0% 100%, 99% 86%);
+  clip-path: polygon(100% 100%, 0% 100%, 100% 77%);
+
+}
+
+.banner >a>button{
+  margin-bottom: 5vmax;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 0;
+  padding: 1vmax;
+  transition: all 0.5s;
+  width: 9vmax;
+  font:500 1vmax Roboto;
+}
+
+.banner >a>button:hover{
+  background-color: rgba(255,255,255,0);
+  color: white;
+}
+
+
+.fileUploader::-webkit-file-upload-button:hover {
+  background-color: rgb(191, 214, 248);
+  transform: translateY(-5px) scaleX(1.1);
+}
+
+.menuBurger{
+  height: 4.5vmax !important;
+}
+
+/* query for userList */
+@media (min-width: 550px) and (max-width: 940px) {
+  #userListTable {
+    width: 180%;
+  }
+}
+
+@media (min-width: 270px) and (max-width: 549px) {
+  #userListTable {
+    width: 300%;
+  }
+}
+
+@media (min-width: 50px) and (max-width: 269px) {
+  #userListTable {
+    width: 450%;
+  }
+}
+
+/* query for courseList */
+@media (min-width: 700px) and (max-width: 1100px) {
+  #courseListTable {
+    width: 200%;
+  }
+}
+
+/* query for courseList */
+@media (min-width: 300px) and (max-width: 699px) {
+  #courseListTable {
+    width: 350%;
+  }
+}
+
+@media (min-width: 50px) and (max-width: 299px) {
+  #courseListTable {
+    width: 550%;
+  }
+}
