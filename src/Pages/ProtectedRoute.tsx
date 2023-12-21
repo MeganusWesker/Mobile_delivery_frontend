@@ -24,7 +24,7 @@ const ProtectedRoute = ({
     }
   
     if (isAdmin && user !== undefined && user.role !== "admin") {
-      toast.error('Not Authorized');
+      toast.error('Only Admin can access');
       navigate("/");
     }
   }, [isAuthenticated,isAdmin,user?.role])
